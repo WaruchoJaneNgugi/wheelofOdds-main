@@ -211,6 +211,7 @@ const Loader: React.FC<{ onLoadingComplete: () => void }> = ({ onLoadingComplete
             0%, 100% { opacity: 0.7; }
             50% { opacity: 1; }
           }
+          
         `}
             </style>
         </div>
