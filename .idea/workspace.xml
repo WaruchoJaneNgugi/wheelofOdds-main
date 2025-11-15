@@ -5,7 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a26189da-9cf2-4fea-90f8-f8a260efe48b" name="Changes" comment="initial file upload">
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SpinOddsAudio/AudioFiles/betAmountsnd.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SpinOddsAudio/AudioFiles/betsnd.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SpinOddsAudio/AudioFiles/bonusSound.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SpinOddsAudio/AudioFiles/popuplose.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SpinOddsAudio/AudioFiles/popupwin.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SpinOddsAudio/AudioFiles/spin-bg.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SpinOddsAudio/AudioFiles/wheelrolling.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SpinOddsAudio/useSpinAudio.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-BQYK6RGN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-BQYK6RGN.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-D7552MD7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-D7552MD7.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-G3PMV62Z.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-G3PMV62Z.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/lucide-react.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/lucide-react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/lucide-react.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/lucide-react.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react-dom_client.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/react_jsx-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainGameArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainGameArea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SpinControls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SpinControls.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +48,12 @@
     &quot;assignee&quot;: &quot;jane-spothub&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jane-spothub/wheelofOdds-main.git",
-    "accountId": "7dc1e588-6d13-49b5-8f37-5afcb513d54c"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jane-spothub/wheelofOdds-main.git&quot;,
+    &quot;accountId&quot;: &quot;7dc1e588-6d13-49b5-8f37-5afcb513d54c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -42,7 +69,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/jane-ngugi/Desktop/NewCasinoGames/wheelofOdds-main",
+    "last_opened_file_path": "/home/jane-ngugi/Desktop/NewCasinoGames/wheelofOdds-main/src/SpinOddsAudio/AudioFiles",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,6 +81,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/SpinOddsAudio/AudioFiles" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/assets/img/scene" />
     </key>
   </component>
@@ -77,6 +106,7 @@
       <workItem from="1761904421751" duration="634000" />
       <workItem from="1763124828036" duration="18176000" />
       <workItem from="1763143194257" duration="687000" />
+      <workItem from="1763199967048" duration="2811000" />
     </task>
     <task id="LOCAL-00001" summary="initial file upload">
       <option name="closed" value="true" />

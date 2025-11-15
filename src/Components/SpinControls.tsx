@@ -57,7 +57,7 @@ export const SpinControls: FC<SpinControlsProps> = ({
 
                     <div className="Bet-spin-area">
                         <div className="spin-short-bet">
-                            {[20, 50, 100, 150, 250, 500].map((amount) => (
+                            {[10, 50, 100,250, 500].map((amount) => (
                                 <div
                                     className={`bet-short-spin ${betAmount === amount ? "active-bet":""}`}
                                     key={amount}
