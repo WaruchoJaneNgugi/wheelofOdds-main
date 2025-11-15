@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a26189da-9cf2-4fea-90f8-f8a260efe48b" name="Changes" comment="updated sounds">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Canvas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Canvas.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MainGameArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainGameArea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hooks/useColors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hooks/useColors.ts" afterDir="false" />
-    </list>
+    <list default="true" id="a26189da-9cf2-4fea-90f8-f8a260efe48b" name="Changes" comment="updated odds and game logic" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +77,7 @@
       <workItem from="1761904421751" duration="634000" />
       <workItem from="1763124828036" duration="18176000" />
       <workItem from="1763143194257" duration="687000" />
-      <workItem from="1763199967048" duration="9117000" />
+      <workItem from="1763199967048" duration="9821000" />
     </task>
     <task id="LOCAL-00001" summary="initial file upload">
       <option name="closed" value="true" />
@@ -132,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763205242412</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updated odds and game logic">
+      <option name="closed" value="true" />
+      <created>1763211201158</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763211201158</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +165,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial file upload" />
     <MESSAGE value="updated sounds" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated sounds" />
+    <MESSAGE value="updated odds and game logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated odds and game logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
