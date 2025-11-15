@@ -10,7 +10,7 @@ import {useSpinAudio} from "../SpinOddsAudio/useSpinAudio.ts";
 export const MainGameArea = () => {
     const [spinState, setSpinState] = useState<boolean>(false);
     const [winner, setWinner] = useState<ColorBlock | null>(null);
-    const [betAmount, setBetAmount] = useState<number>(20);
+    const [betAmount, setBetAmount] = useState<number>(10);
     const [amountWon, setAmountWon] = useState<number>(0);
     const [balance, setBalance] = useState<number>(1000);
     const [isMuted, setIsMuted] = useState<boolean>(false);
@@ -87,6 +87,7 @@ export const MainGameArea = () => {
                     isMuted={isMuted}
                 />
                 <div className="spin-game-area">
+
                     <Canvas
                         spinState={spinState}
                         OnSetWinner={setWinner}
