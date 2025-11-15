@@ -71,17 +71,17 @@ export const ResultPopup: React.FC<ResultPopupProps> = ({ winner, amountWon, onC
                     {/* Stats */}
                     <div className="popup-stats">
                         <div className="stat-item">
-                            <span className="stat-label">Selected:</span>
+                            <span className="stat-label">Multiplier:</span>
                             <span className="stat-value">{winner}</span>
                         </div>
-                        {isWin && (
-                            <div className="stat-item">
-                                <span className="stat-label">Multiplier:</span>
-                                <span className="stat-value">
-                                    {isWin ? (amountWon / 20).toFixed(1) + 'x' : '0x'}
-                                </span>
-                            </div>
-                        )}
+                        {/*{isWin && (*/}
+                        {/*    <div className="stat-item">*/}
+                        {/*        <span className="stat-label">Multiplier:</span>*/}
+                        {/*        <span className="stat-value">*/}
+                        {/*            {isWin ? (amountWon).toFixed(1) + 'x' : '0x'}*/}
+                        {/*        </span>*/}
+                        {/*    </div>*/}
+                        {/*)}*/}
                     </div>
 
                     {/*/!* Action Button *!/*/}
