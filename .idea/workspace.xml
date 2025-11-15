@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a26189da-9cf2-4fea-90f8-f8a260efe48b" name="Changes" comment="updated sounds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ResultPopUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ResultPopUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Canvas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Canvas.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainGameArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainGameArea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hooks/useColors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hooks/useColors.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +82,7 @@
       <workItem from="1761904421751" duration="634000" />
       <workItem from="1763124828036" duration="18176000" />
       <workItem from="1763143194257" duration="687000" />
-      <workItem from="1763199967048" duration="4319000" />
+      <workItem from="1763199967048" duration="9117000" />
     </task>
     <task id="LOCAL-00001" summary="initial file upload">
       <option name="closed" value="true" />
@@ -122,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763204846350</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated sounds">
+      <option name="closed" value="true" />
+      <created>1763205242412</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763205242412</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +163,18 @@
     <MESSAGE value="initial file upload" />
     <MESSAGE value="updated sounds" />
     <option name="LAST_COMMIT_MESSAGE" value="updated sounds" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Hooks/useColors.ts</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

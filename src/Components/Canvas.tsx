@@ -69,6 +69,18 @@ export const Canvas: FC<CanvasProps> = ({spinState, OnSetWinner}) => {
 
                 ctx.fillStyle = grad;
 
+            }
+            else if (block.hex === "#8B0000") {
+                const grad = ctx.createRadialGradient(
+                    centerX, centerY, 0,       // inner circle (center, radius 0)
+                    centerX, centerY, radius   // outer circle (center, radius = wheel size)
+                );
+
+                grad.addColorStop(0, "rgba(68,18,47,0.2)"); // inner
+                grad.addColorStop(1, "#cc0404"); // outer
+
+                ctx.fillStyle = grad;
+
             } else if (block.hex === "#ffd60a") {
                 const grad = ctx.createRadialGradient(
                     centerX, centerY, 0,       // inner circle (center, radius 0)
@@ -80,7 +92,8 @@ export const Canvas: FC<CanvasProps> = ({spinState, OnSetWinner}) => {
 
                 ctx.fillStyle = grad;
 
-            } else if (block.hex === "rgb(6,0,148)") {
+            }
+            else if (block.hex === "rgb(6,0,148)") {
                 const grad = ctx.createRadialGradient(
                     centerX, centerY, 0,       // inner circle (center, radius 0)
                     centerX, centerY, radius   // outer circle (center, radius = wheel size)
@@ -371,7 +384,7 @@ export const Canvas: FC<CanvasProps> = ({spinState, OnSetWinner}) => {
     }, [spinState, drawWheel, prevSpin, OnSetWinner]);
     return (
         <div style={{position: 'relative', display: 'flex',flexDirection:"column"}}>
-            <canvas ref={canvasRef} width={820} height={820}/>
+            <canvas ref={canvasRef} width={860} height={820}/>
             <ColorKey/>
         </div>
     );

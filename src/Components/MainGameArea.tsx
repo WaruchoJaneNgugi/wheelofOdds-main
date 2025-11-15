@@ -24,6 +24,7 @@ export const MainGameArea = () => {
 
     const handleSpin = () => {
         if (spinState) return;
+        if(betAmount>balance)return;
         setBalance(prev => prev - betAmount);
         setSpinState(true);
 
