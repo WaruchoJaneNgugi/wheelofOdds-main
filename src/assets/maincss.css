@@ -1208,6 +1208,272 @@ canvas {
     }
 }
 
+/* Add these styles to your existing CSS */
+
+/* Wheel Facts Section */
+.wheel-facts {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.wheel-facts h4 {
+    margin-bottom: 10px;
+    color: var(--accent-green);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.fact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fact-item svg {
+    color: var(--accent-green);
+    flex-shrink: 0;
+}
+
+.fact-item span {
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.probability-note {
+    color: var(--accent-blue);
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    background: rgba(0, 60, 255, 0.1);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 60, 255, 0.2);
+}
+
+/* Responsive adjustments for facts grid */
+@media (max-width: 768px) {
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Color dots styling for multiplier list */
+.color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px currentColor;
+}
+
+/* Ensure all sections have consistent spacing */
+.game-rules,
+.multiplier-info,
+.points-tips,
+.wheel-facts {
+    margin-bottom: 15px;
+}
+
+/* Make sure points are emphasized in the rules */
+.game-rules li strong {
+    color: var(--accent-green);
+    font-weight: bold;
+}
+/* Points Tips Section Styling */
+.points-tips {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.points-tips::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg,
+    transparent 0%,
+    var(--accent-green) 20%,
+    var(--accent-green) 80%,
+    transparent 100%
+    );
+}
+
+.points-tips h4 {
+    margin-bottom: 15px;
+    color: var(--accent-green);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.points-tips h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(90deg,
+    transparent 0%,
+    var(--accent-green) 30%,
+    var(--accent-green) 70%,
+    transparent 100%
+    );
+}
+
+.points-tips ul {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Custom Neon Green Scrollbar */
+.points-tips ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+.points-tips ul::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.points-tips ul::-webkit-scrollbar-thumb {
+    background: var(--accent-green);
+    border-radius: 4px;
+    box-shadow: 0 0 10px var(--accent-green);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.points-tips ul::-webkit-scrollbar-thumb:hover {
+    background: #00ffaa;
+    box-shadow: 0 0 15px #00ffaa;
+}
+
+/* Firefox scrollbar styling */
+.points-tips ul {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-green) rgba(0, 0, 0, 0.2);
+}
+
+.points-tips li {
+    padding: 12px 15px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 8px;
+    background: rgba(0, 255, 136, 0.05);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-green);
+    transition: all 0.3s ease;
+}
+
+.points-tips li:hover {
+    background: rgba(0, 255, 136, 0.1);
+    transform: translateX(5px);
+    border-left-width: 5px;
+}
+
+.points-tips li::before {
+    content: '★';
+    color: var(--accent-green);
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    text-shadow: 0 0 8px var(--accent-green);
+}
+
+.points-tips li:nth-child(2)::before {
+    content: '⚡';
+}
+
+.points-tips li:nth-child(3)::before {
+    content: '💰';
+}
+
+.points-tips li:nth-child(4)::before {
+    content: '🎲';
+}
+
+.points-tips li:nth-child(5)::before {
+    content: '🎯';
+}
+
+.points-tips li:nth-child(6)::before {
+    content: '⚠️';
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .points-tips {
+        padding: 15px;
+    }
+
+    .points-tips h4 {
+        font-size: 1.1rem;
+    }
+
+    .points-tips li {
+        padding: 10px 12px;
+        padding-left: 25px;
+        font-size: 13px;
+    }
+
+    .points-tips li::before {
+        left: 8px;
+        font-size: 12px;
+    }
+
+    .points-tips ul {
+        max-height: 180px;
+    }
+}
+
+/* Animation for the tips */
+@keyframes tipPulse {
+    0%, 100% {
+        border-color: rgba(0, 255, 136, 0.3);
+    }
+    50% {
+        border-color: var(--accent-green);
+    }
+}
+
+.points-tips {
+    animation: tipPulse 3s infinite;
+}
+
 /* Responsive Design */
 @media (min-width: 600px) {
     .chip-image {

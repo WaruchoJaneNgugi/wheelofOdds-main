@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a26189da-9cf2-4fea-90f8-f8a260efe48b" name="Changes" comment="updated odds and game logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Canvas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Canvas.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MainGameArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainGameArea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ResultPopUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ResultPopUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SpinControls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SpinControls.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Topbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Topbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HowToPlay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HowToPlay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/maincss.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/maincss.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +97,7 @@
       <workItem from="1768210739385" duration="923000" />
       <workItem from="1768286315263" duration="9846000" />
       <workItem from="1768373099956" duration="4743000" />
-      <workItem from="1768462626957" duration="2488000" />
+      <workItem from="1768462626957" duration="3958000" />
     </task>
     <task id="LOCAL-00001" summary="initial file upload">
       <option name="closed" value="true" />
@@ -159,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763211201158</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="updated odds and game logic">
+      <option name="closed" value="true" />
+      <created>1768465163934</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1768465163935</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
