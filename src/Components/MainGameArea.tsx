@@ -10,11 +10,11 @@ import {useSpinAudio} from "../SpinOddsAudio/useSpinAudio.ts";
 export const MainGameArea = () => {
     const [spinState, setSpinState] = useState<boolean>(false);
     const [winner, setWinner] = useState<ColorBlock | null>(null);
-    const [betAmount, setBetAmount] = useState<number>(10);
-    const [amountWon, setAmountWon] = useState<number>(0);
-    const [balance, setBalance] = useState<number>(1000);
+    const [betPoints, setBetPoints] = useState<number>(10);
+    const [pointsWon, setPointsWon] = useState<number>(0);
+    const [points, setPoints] = useState<number>(150);
     const [isMuted, setIsMuted] = useState<boolean>(false);
-
+    const [showPopUp,setShowpopUp]=useState<boolean>(false)
     // Initialize the audio hook
     const { playSpinCornerSnd, playSpinWheelLoop } = useSpinAudio(isMuted, true);
 
@@ -24,8 +24,8 @@ export const MainGameArea = () => {
 
     const handleSpin = () => {
         if (spinState) return;
-        if(betAmount>balance)return;
-        setBalance(prev => prev - betAmount);
+        if(betPoints > points)return;
+        setPoints(prev => prev - betPoints);
         setSpinState(true);
 
         // Play bet sound when spinning starts
@@ -37,14 +37,23 @@ export const MainGameArea = () => {
 
     // Reset spin state when winner is set (wheel stops)
     useEffect(() => {
+        setShowpopUp(false);
         if (winner) {
+            setShowpopUp(true);
             setSpinState(false); // Reset spin state immediately when wheel stops
 
             // Play win/lose sound based on result
             if (winner.multiplier !== 0) {
                 playSpinCornerSnd("popUpWin");
+                setShowpopUp(true);
+                setTimeout(() => setShowpopUp(false), 2000);
+
             } else {
+                setShowpopUp(true);
+
                 playSpinCornerSnd("popUpLose");
+                setTimeout(() => setShowpopUp(false), 2000);
+
             }
         }
     }, [winner, playSpinCornerSnd]);
@@ -55,8 +64,8 @@ export const MainGameArea = () => {
         let payout = 0;
 
         if (winner.multiplier !== 0) {
-            payout = betAmount * winner.multiplier;
-            setBalance(prev => prev + payout);
+            payout = betPoints * winner.multiplier;
+            setPoints(prev => prev + payout);
             console.log("DEBUG - WIN! Payout:", payout);
 
             // Play bonus sound for big wins (optional - adjust threshold as needed)
@@ -68,22 +77,22 @@ export const MainGameArea = () => {
             console.log("DEBUG - LOSE! Landed on zero");
         }
 
-        setAmountWon(payout);
+        setPointsWon(payout);
 
-    }, [betAmount, winner, playSpinCornerSnd]);
+    }, [betPoints, winner, playSpinCornerSnd]);
 
     // Play bet amount sound when bet amount changes
     useEffect(() => {
-        if (betAmount > 20) { // Don't play on initial load
+        if (betPoints > 20) { // Don't play on initial load
             playSpinCornerSnd("BetAmountSnd");
         }
-    }, [betAmount, playSpinCornerSnd]);
+    }, [betPoints, playSpinCornerSnd]);
 
     return (
         <div className="Spin-main-container">
             <div className="spin-main-game-area">
                 <Topbar
-                    balance={balance}
+                    points={Math.floor(points)}
                     onMuteToggle={handleMuteToggle}
                     isMuted={isMuted}
                 />
@@ -97,14 +106,17 @@ export const MainGameArea = () => {
                 <SpinControls
                     handleSpin={handleSpin}
                     spinState={spinState}
-                    OnSetBetAmount={setBetAmount}
-                    betAmount={betAmount}
+                    OnSetBetPoints={setBetPoints}
+                    betPoints={betPoints}
                 />
-                <ResultPopup
-                    winner={winner ? winner.name : null}
-                    amountWon={amountWon}
-                    onClose={() => setWinner(null)}
-                />
+                {showPopUp && (
+                    <ResultPopup
+                        winner={winner ? winner.name : null}
+                        pointsWon={pointsWon}
+                        onClose={() => setWinner(null)}
+                    />
+                )}
+
             </div>
         </div>
     );

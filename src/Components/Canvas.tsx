@@ -147,6 +147,14 @@ export const Canvas: FC<CanvasProps> = ({spinState, OnSetWinner}) => {
             ctx.restore();
 
         });
+        ctx.shadowColor = "rgba(0,0,0,0.27)";
+        ctx.shadowBlur = 20;
+        ctx.shadowOffsetX = 0;
+        ctx.shadowOffsetY = 15;
+
+// Draw the shadow (fill with very light color)
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+        ctx.fill();
 /// 🎨 Gradient border for the wheel
         ctx.save();
         ctx.beginPath();
@@ -182,7 +190,28 @@ export const Canvas: FC<CanvasProps> = ({spinState, OnSetWinner}) => {
         ctx.fillRect(centerX - radius, centerY - radius, radius * 2, radius * 2);
 
         ctx.restore();
+        ctx.shadowColor = "rgba(0, 0, 0, 0.8)";
+        ctx.shadowBlur = 20;
+        ctx.shadowOffsetX = 0;
+        ctx.shadowOffsetY = 15;
 
+// Draw the shadow (fill with very light color)
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+        ctx.fill();
+
+// Add a subtle inner glow at the edges
+        const edgeGlow = ctx.createRadialGradient(
+            centerX, centerY, radius - 10,
+            centerX, centerY, radius + 10
+        );
+        edgeGlow.addColorStop(0, "rgba(0,0,0,0.1)");
+        edgeGlow.addColorStop(1, "rgba(0, 0, 0, 0)");
+
+        ctx.strokeStyle = edgeGlow;
+        ctx.lineWidth = 30;
+        ctx.stroke();
+
+        ctx.restore();
 
         if (pointer.current) {
             const pointerWidth = 90;
@@ -253,38 +282,7 @@ export const Canvas: FC<CanvasProps> = ({spinState, OnSetWinner}) => {
         ctx.restore();
 
 
-        // ctx.stroke();
-        // ctx.restore();
-//         if (winner) {
-//             ctx.fillStyle = "rgb(47,4,30)";   // inside color
-//             ctx.font = "bold 90px Arial";     // bold + big font
-//             ctx.textAlign = "center";
-//             ctx.textBaseline = "middle";
-//
-//             ctx.strokeStyle = "#fffefe";      // outline color (black)
-//             ctx.lineWidth = 4;                // outline thickness
-//
-// // Draw outline first
-//             ctx.strokeText(winner.name, centerX, centerY);
-//
-// // Draw filled text on top
-//             ctx.fillText(winner.name, centerX, centerY);
-//
-//
-//         } else {
-//
-//             ctx.fillStyle = "rgb(47,4,30)";   // inside color
-//             ctx.font = "bold 100px Arial";     // bold + big font
-//             ctx.textAlign = "center";
-//             ctx.textBaseline = "middle";
-//
-//             ctx.strokeStyle = "#fffefe";      // outline color (black)
-//             ctx.lineWidth = 4;                // outline thickness
-//             ctx.strokeText("..", centerX, centerY);
-//             ctx.fillText("..", centerX, centerY);
-//             // ctx.fillText("..", centerX, centerY);
-//         }
-        // === 🎨 Draw Logo in Center ===
+
         if (logo.current) {
             const logoSize = 360; // adjust size as needed
             const logoX = centerX - logoSize / 2;
@@ -304,6 +302,7 @@ export const Canvas: FC<CanvasProps> = ({spinState, OnSetWinner}) => {
 
             ctx.restore();
         }
+
 
 
         // After drawing the wheel
@@ -383,7 +382,7 @@ export const Canvas: FC<CanvasProps> = ({spinState, OnSetWinner}) => {
         requestAnimationFrame(animate);
     }, [spinState, drawWheel, prevSpin, OnSetWinner]);
     return (
-        <div style={{position: 'relative', display: 'flex',flexDirection:"column"}}>
+        <div className="canvas-container" style={{position: 'relative', display: 'flex',flexDirection:"column"}}>
             <canvas ref={canvasRef} width={860} height={820}/>
             <ColorKey/>
         </div>

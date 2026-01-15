@@ -3,12 +3,12 @@ import { Settings, Volume2, VolumeX } from 'lucide-react';
 import { SettingsOverlay } from "./SettingsOverlay.tsx";
 
 interface GameHeaderProps {
-    balance: number;
+    points: number;
     onMuteToggle: () => void;
     isMuted: boolean;
 }
 
-export const Topbar: FC<GameHeaderProps> = ({ balance, onMuteToggle, isMuted }) => {
+export const Topbar: FC<GameHeaderProps> = ({ points, onMuteToggle, isMuted }) => {
     const [showSettings, setShowSettings] = useState(false);
 
     return (
@@ -19,8 +19,8 @@ export const Topbar: FC<GameHeaderProps> = ({ balance, onMuteToggle, isMuted }) 
 
                 {/* Center: Balance */}
                 <div className="balance-section">
-                    <span className="balance-label">BALANCE :</span>
-                    <span className="balance-amount">{balance.toFixed(2)}</span>
+                    <span className="balance-label">POINTS :</span>
+                    <span className="balance-amount">{points}</span>
                 </div>
 
                 {/* Right: Settings Button */}

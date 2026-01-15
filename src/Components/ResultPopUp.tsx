@@ -1,20 +1,19 @@
 import { Trophy, X, RotateCcw, Star, Coins } from 'lucide-react';
+import type {FC} from "react";
 
 interface ResultPopupProps {
     winner: string | null;
-    amountWon: number;
+    pointsWon: number;
     onClose: () => void;
 }
 
-export const ResultPopup: React.FC<ResultPopupProps> = ({ winner, amountWon, onClose }) => {
+export const ResultPopup: FC<ResultPopupProps> = ({ winner, pointsWon, onClose }) => {
     // Fix: Check if winner is null OR empty string
-    if (!winner || winner === "") return null;
 
-    const isWin = amountWon > 0;
 
     return (
         <div className="modern-popup-overlay">
-            <div className={`modern-popup-container ${isWin ? 'popup-win' : 'popup-lose'}`}>
+            <div className={`modern-popup-container ${pointsWon>0 ? 'popup-win' : 'popup-lose'}`}>
 
                 {/* Header with Close Button */}
                 <div className="popup-header">
@@ -26,8 +25,12 @@ export const ResultPopup: React.FC<ResultPopupProps> = ({ winner, amountWon, onC
                 {/* Main Content */}
                 <div className="popup-content">
                     {/* Animated Icon */}
-                    <div className={`popup-icon ${isWin ? 'win-icon' : 'lose-icon'}`}>
-                        {isWin ? (
+                    <div className={`popup-icon ${pointsWon===0 ?  'lose-icon' :'win-icon'}`}>
+                        {pointsWon===0 ? (
+                            <div className="icon-container">
+                                <RotateCcw size={48} className="retry-icon" />
+                            </div>
+                        ):(
                             <div className="icon-container">
                                 <Trophy size={48} className="trophy-icon" />
                                 <div className="sparkle-container">
@@ -36,27 +39,26 @@ export const ResultPopup: React.FC<ResultPopupProps> = ({ winner, amountWon, onC
                                     <Star size={14} className="sparkle sparkle-3" />
                                 </div>
                             </div>
-                        ) : (
-                            <div className="icon-container">
-                                <RotateCcw size={48} className="retry-icon" />
-                            </div>
                         )}
+
+
+
                     </div>
 
                     {/* Title */}
-                    <h2 className={`popup-title ${isWin ? 'win-title' : 'lose-title'}`}>
-                        {isWin ? 'Victory!' : 'Try Again'}
+                    <h2 className={`popup-title ${pointsWon>0 ? 'win-title' : 'lose-title'}`}>
+                        {pointsWon>0 ? 'Victory!' : 'Try Again'}
                     </h2>
 
                     {/* Result Message */}
                     <div className="popup-message">
-                        {isWin ? (
+                        {pointsWon>0 ? (
                             <div className="win-message">
                                 <div className="amount-display">
                                     <span className="currency">
                                         <Coins size={32} className="coins-icon" />
                                     </span>
-                                    <span className="amount">{amountWon.toLocaleString()}</span>
+                                    <span className="amount">{pointsWon.toLocaleString()} Points</span>
                                 </div>
                                 <p className="message-text">Congratulations! You won big!</p>
                             </div>
@@ -78,7 +80,7 @@ export const ResultPopup: React.FC<ResultPopupProps> = ({ winner, amountWon, onC
                         {/*    <div className="stat-item">*/}
                         {/*        <span className="stat-label">Multiplier:</span>*/}
                         {/*        <span className="stat-value">*/}
-                        {/*            {isWin ? (amountWon).toFixed(1) + 'x' : '0x'}*/}
+                        {/*            {isWin ? (pointsWon).toFixed(1) + 'x' : '0x'}*/}
                         {/*        </span>*/}
                         {/*    </div>*/}
                         {/*)}*/}
@@ -95,7 +97,7 @@ export const ResultPopup: React.FC<ResultPopupProps> = ({ winner, amountWon, onC
 
                 {/* Decorative Elements */}
                 <div className="popup-decoration">
-                    {isWin && (
+                    {pointsWon>0 && (
                         <>
                             <div className="decoration-circle circle-1"></div>
                             <div className="decoration-circle circle-2"></div>
