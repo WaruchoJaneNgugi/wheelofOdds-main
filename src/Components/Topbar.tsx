@@ -19,7 +19,7 @@ export const Topbar: FC<GameHeaderProps> = ({ points, onMuteToggle, isMuted }) =
 
                 {/* Center: Balance */}
                 <div className="balance-section">
-                    <span className="balance-label">POINTS :</span>
+                    <span className="balance-label">Balance :</span>
                     <span className="balance-amount">{points}</span>
                 </div>
 

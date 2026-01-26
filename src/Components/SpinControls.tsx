@@ -19,7 +19,7 @@ export const SpinControls: FC<SpinControlsProps> = ({
             <div className="Spin-main-controls">
                 <div className="Bet-amount-area-spin">
                     <div className="bet-Amount-text">
-                        <div>Bet Points</div>
+                        <div>Bet Amounts</div>
                         <div>{betPoints} pts</div>
                     </div>
 
